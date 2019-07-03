@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 29.04.2014 22:41:29 by Hibernate Tools 3.0 -->
+<hibernate-mapping>
+    <class name="pojos.Person" table="person" catalog="authority">
+        <id name="idPerson" type="java.lang.Integer">
+            <column name="id_person" />
+            <generator class="identity" />
+        </id>
+        <property name="login" type="string">
+            <column name="login" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="25" not-null="true" />
+        </property>
+        <property name="puttime" type="timestamp">
+            <column name="puttime" length="19" not-null="false" />
+        </property>
+    </class>
+</hibernate-mapping>
